@@ -1,14 +1,14 @@
-//Feelings
+//myFeelings
 let feelings = [{
-  10 am: "I'm lost"
+   am: "yee"
 }, {
-   2 pm: "I feel alone"
+   pm: "8^P"
 }, {
-   7 pm: "Not sure who I am supposed to be"
+   pm: "Not sure"
 }, {
-   12 am: "What's the point of anything?"
+   am: "sad?"
 }, {
-   2 am: "I'm tired"
+   am: "I'm tired"
 }];
 
 function setup() {
