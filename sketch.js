@@ -12,7 +12,7 @@ let feelings = [{
    evening:"sad?",
    alternative: "What's the point?"
 }, {
-   AM:"I'm tired",
+   end:"I'm tired",
    alternative: "I'm so tired"
 }];
 
@@ -21,7 +21,9 @@ let randomIndex;
 function setup() {
   createCanvas(600, 600);
   background(200);
+  textSize(32);
 
+  text("Hm", 250, 300);
 
 }
 
@@ -44,7 +46,8 @@ if (feelings[0]){
   feelings.splice(randomIndex,1);
   //console.log(feelings);
 } else {
-  text("the end", 250, 300);
+  background(random(200, 255));
+  text("goodbye", 250, 300);
 }
 
 
