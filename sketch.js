@@ -24,16 +24,33 @@ function setup() {
 
   randomIndex = int(random(feelings.length));
 
-  console.log(feelings[randomIndex].alternative);
+  //console.log(feelings[randomIndex].alternative);
   text(feelings[randomIndex].alternative, 250, 300);
   //console.log(feelings[int(random(feelings.length))].alternative);
 
   feelings.splice(randomIndex,1);
-  console.log(feelings);
+  //console.log(feelings);
 
 
 }
 
 function draw() {
   background(220);
+
+}
+
+function mousePressed() {
+  background(random(200, 255));
+
+  randomIndex = int(random(feelings.length));
+
+  //console.log(feelings[randomIndex].alternative);
+  text(feelings[randomIndex].alternative, 250, 300);
+  //console.log(feelings[int(random(feelings.length))].alternative);
+
+  feelings.splice(randomIndex,1);
+  //console.log(feelings);
+
+
+
 }
