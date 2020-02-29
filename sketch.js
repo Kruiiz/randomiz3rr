@@ -3,13 +3,17 @@ let feelings = [{
    dawn:"yee",
    alternative: "fuck"
 }, {
-   morning:"8^P"
+   morning:"8^P",
+   alternative: "I feel so empty"
 }, {
-   noon:"Not sure"
+   noon:"Not sure",
+   alternative: "I don't know who I am"
 }, {
-   evening:"sad?"
+   evening:"sad?",
+   alternative: "What's the point?"
 }, {
-   AM:"I'm tired"
+   AM:"I'm tired",
+   alternative: "I'm so tired"
 }];
 
 function setup() {
@@ -17,7 +21,7 @@ function setup() {
   background(200);
 
 
-  console.log(feelings[int(random(feelings.length))]);
+  console.log(feelings[int(random(feelings.length))].alternative);
 
 
 }
