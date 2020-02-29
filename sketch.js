@@ -1,6 +1,7 @@
 //myFeelings
 let feelings = [{
-   dawn:"yee"
+   dawn:"yee",
+   alternative: "fuck"
 }, {
    morning:"8^P"
 }, {
@@ -15,7 +16,9 @@ function setup() {
   createCanvas(600, 600);
   background(200);
 
-  console.log(feelings[0]);
+
+  console.log(feelings[int(random(feelings.length))]);
+
 
 }
 
