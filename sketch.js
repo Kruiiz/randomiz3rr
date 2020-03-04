@@ -22,8 +22,8 @@ let crew = [];
 
 function preload(){
 
-for (let im = 0; i <= 5, i++) {
-  crew[i] = loadImage(`images/crew${i}.JPG`)
+  for (let i = 0; i <= 5; i++) {
+    crew[i] = loadImage(`images/crew ${i}.JPG`)
 }
 
 }
