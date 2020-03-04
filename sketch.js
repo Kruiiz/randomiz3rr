@@ -18,6 +18,15 @@ let feelings = [{
 
 let randomIndex;
 let animating = false;
+let crew = [];
+
+function preload(){
+
+for (let im = 0; i <= 5, i++) {
+  crew[i] = loadImage(`images/crew${i}.JPG`)
+}
+
+}
 
 function setup() {
   createCanvas(600, 600);
@@ -25,8 +34,7 @@ function setup() {
   textSize(32);
 
   text("Start", 250, 300);
-
-  setTimeout(changeBackground, 1000);
+  console.log(crew);
 
 }
 
@@ -37,19 +45,7 @@ function draw() {
 
 }
 
-
-function changeBackground(){
-  if (counter <= 5) {
-    counter ++;
-  background(random(255), random(255), random(255));
-  setTimeout(changeBackground, 1000);
-  } else {
-    background(random(200,255));
-    text("it's over", 250, 300);
-  }
-}
-
-function randomizer(){
+function randomizer() {
   animating = false;
   if (feelings[0]){
     background(random(200, 255));
@@ -57,22 +53,24 @@ function randomizer(){
     randomIndex = int(random(feelings.length));
 
     //console.log(feelings[randomIndex].alternative);
-    text(feelings[randomIndex].alternative, 250, 300);
+    text(`${feelings[randomIndex].alternative}  What's happening?
+
+    ${feelings[randomIndex].evening}`, 50, 200);
+    //text(feelings[randomIndex].alternative + "What's happening?" +
+    //feelings[randomIndex].evening, 250, 300);
     //console.log(feelings[int(random(feelings.length))].alternative);
 
-    feelings.splice(randomIndex,1);
+    feelings.splice(randomIndex, 1);
     //console.log(feelings);
   } else {
     background(random(200, 255));
     text("Goodbye", 250, 300);
+  }
 }
 
 function mousePressed() {
   animating = true;
   setTimeout(randomizer, 2000);
-
-
-}
 
 
 }
