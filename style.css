@@ -5,3 +5,8 @@ html, body {
 canvas {
   display: block;
 }
+
+.daButton {
+  padding: 20px;
+  background-color: #cbaafd;
+}

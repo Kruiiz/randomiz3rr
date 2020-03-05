@@ -38,13 +38,13 @@ function setup() {
   textAlign(CENTER);
   fill(255)
   imageMode(CENTER);
-  frameRate(6);
+  frameRate(8);
 
   text("Start", 250, 300);
 
   button = createButton("click pls for a wild time");
   button.mousePressed(buttonPressed);
-
+  button.class("daButton")
 }
 
 function draw() {
