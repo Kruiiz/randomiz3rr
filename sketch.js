@@ -20,6 +20,7 @@ let randomIndex;
 let animating = false;
 let crew = [];
 let imageCounter = 1;
+let button;
 
 function preload() {
 
@@ -40,7 +41,9 @@ function setup() {
   frameRate(6);
 
   text("Start", 250, 300);
-  console.log(crew);
+
+  button = createButton("click pls for a wild time");
+  button.mousePressed(buttonPressed);
 
 }
 
@@ -80,7 +83,7 @@ function randomizer() {
   }
 }
 
-function mousePressed() {
+function buttonPressed() {
   animating = true;
   setTimeout(randomizer, 2000);
 
